@@ -1,0 +1,8 @@
+{# templates/book/edit.html.twig #}
+
+<h1>Edit Book</h1>
+
+{{ form_start(form, {'action': path('app_all_book')}) }}
+{{ form_widget(form) }}
+<button type="submit">Save Changes</button>
+{{ form_end(form) }}

@@ -1,0 +1,15 @@
+{# templates/author/add.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Ajouter un auteur</h1>
+
+    {{ form_start(form) }}
+    {{ form_row(form.username) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.picture, { 'attr': {'accept': 'image/png, image/jpeg'} }) }} {# Accepter uniquement les fichiers PNG et JPEG #}
+    {{ form_row(form.nbBooks) }}
+    <button type="submit">Ajouter</button>
+    {{ form_end(form) }}
+{% endblock %}
